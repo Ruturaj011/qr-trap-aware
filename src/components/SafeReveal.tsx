@@ -42,7 +42,7 @@ export const SafeReveal = ({ visitCount }: SafeRevealProps) => {
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-safe-fg mb-4">
-            This Was Just a Test
+            This is just a awareness program of community engagement program
           </h1>
           <p className="text-xl text-safe-muted max-w-2xl mx-auto leading-relaxed">
             Congratulations! You've just experienced a QR code security awareness demonstration. 
