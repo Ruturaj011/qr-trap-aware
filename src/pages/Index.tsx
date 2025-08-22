@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useEffect } from 'react';
+import { TerminalWarning } from '@/components/TerminalWarning';
+import { SafeReveal } from '@/components/SafeReveal';
 
 const Index = () => {
+  const [showReveal, setShowReveal] = useState(false);
+  const [visitCount, setVisitCount] = useState(0);
+
+  useEffect(() => {
+    // Track visitor count
+    const currentCount = parseInt(localStorage.getItem('qr-trap-visits') || '0');
+    const newCount = currentCount + 1;
+    localStorage.setItem('qr-trap-visits', newCount.toString());
+    setVisitCount(newCount);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="w-full">
+      <TerminalWarning onComplete={() => setShowReveal(true)} />
+      {showReveal && <SafeReveal visitCount={visitCount} />}
     </div>
   );
 };

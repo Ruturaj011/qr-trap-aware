@@ -61,7 +61,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				terminal: {
+					bg: 'hsl(var(--terminal-bg))',
+					fg: 'hsl(var(--terminal-fg))',
+					danger: 'hsl(var(--terminal-danger))',
+					warning: 'hsl(var(--terminal-warning))',
+					glow: 'hsl(var(--terminal-glow))'
+				},
+				safe: {
+					bg: 'hsl(var(--safe-bg))',
+					fg: 'hsl(var(--safe-fg))',
+					accent: 'hsl(var(--safe-accent))',
+					muted: 'hsl(var(--safe-muted))'
 				}
+			},
+			backgroundImage: {
+				'gradient-terminal': 'var(--gradient-terminal)',
+				'gradient-safe': 'var(--gradient-safe)',
+				'gradient-glow': 'var(--gradient-glow)'
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
