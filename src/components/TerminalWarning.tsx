@@ -30,7 +30,7 @@ export const TerminalWarning = ({ onComplete }: TerminalWarningProps) => {
           return prev;
         }
       });
-    }, 800);
+    }, 375);
 
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
