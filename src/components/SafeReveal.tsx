@@ -5,10 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 interface SafeRevealProps {
   visitCount: number;
-  isLoading?: boolean;
 }
 
-export const SafeReveal = ({ visitCount, isLoading = false }: SafeRevealProps) => {
+export const SafeReveal = ({ visitCount }: SafeRevealProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -64,10 +63,10 @@ export const SafeReveal = ({ visitCount, isLoading = false }: SafeRevealProps) =
           </CardHeader>
           <CardContent className="text-center">
             <div className="text-3xl font-bold text-safe-accent mb-2">
-              {isLoading ? '...' : visitCount}
+              {visitCount}
             </div>
             <p className="text-safe-muted">
-              People have visited this awareness campaign (lifetime total)
+              People have scanned this QR code so far
             </p>
           </CardContent>
         </Card>
